@@ -11,8 +11,20 @@ export class VesselService {
 
   constructor(private http: HttpClient) { }
 
-  getAllVessel(): Observable<HttpResponse<Vessel>> {
-    return this.http.get<Vessel>(
-     "/api/vessel", { observe: 'response' });
+  getAllVessel(): Observable<Array<Vessel>> {
+    return this.http.get<Array<Vessel>>("/api/vessel", { observe: 'body' });
   }
+
+  createRandomVessel(): Observable<Vessel> {
+    return this.http.get<Vessel>("/api/create/vessel", { observe: 'body' });
+  }
+
+  updateVessel(vessel: Vessel): Observable<Vessel> {
+    return this.http.post<Vessel>("/api/vessel", vessel, { observe: 'body' })
+  }
+
+  getVessel(id: number): Observable<Vessel> {
+    return this.http.get<Vessel>(`/api/vessel/${id}`, { observe: 'body' })
+  }
+
 }
