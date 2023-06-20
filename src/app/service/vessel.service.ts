@@ -11,8 +11,8 @@ export class VesselService {
 
   constructor(private http: HttpClient) { }
 
-  getAllVessel(): Observable<Array<Vessel>> {
-    return this.http.get<Array<Vessel>>("/api/vessel", { observe: 'body' });
+  getAllVessel(): Observable<Vessel[]> {
+    return this.http.get<Vessel[]>("/api/vessel", { observe: 'body' });
   }
 
   createRandomVessel(): Observable<Vessel> {
