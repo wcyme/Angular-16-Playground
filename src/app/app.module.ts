@@ -8,6 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VesselEditComponent } from './vessel-edit/vessel-edit.component';
 import { FormsModule } from '@angular/forms';
+import { AgGridModule } from 'ag-grid-angular';
+import { VesselListComponent } from './vessel-list/vessel-list.component';
 
 
 @NgModule({
@@ -15,13 +17,15 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     HomeComponent,
     VesselEditComponent,
+    VesselListComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    AgGridModule,
     AppRoutingModule,
     CoreModule,
-    HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
