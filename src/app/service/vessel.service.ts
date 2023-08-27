@@ -16,7 +16,7 @@ export class VesselService {
   }
 
   createRandomVessel(): Observable<Vessel> {
-    return this.http.get<Vessel>("/api/create/vessel", { observe: 'body' });
+    return this.http.get<Vessel>("/api/vessel/create", { observe: 'body' });
   }
 
   updateVessel(vessel: Vessel): Observable<Vessel> {
