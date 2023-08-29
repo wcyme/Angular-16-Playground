@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { VesselService } from '../service/vessel.service';
+
 import { Vessel } from '../entity/vessel';
+import { VesselService } from '../service/vessel/vessel.service';
 
 @Component({
   selector: 'app-home',

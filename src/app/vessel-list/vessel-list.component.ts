@@ -2,8 +2,8 @@ import { Component, ViewChild } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef, GridReadyEvent } from 'ag-grid-community';
 import { Observable } from 'rxjs';
-import { VesselService } from '../service/vessel.service';
 import { Vessel } from '../entity/vessel';
+import { VesselService } from '../service/vessel/vessel.service';
 
 @Component({
   selector: 'app-vessel-list',
