@@ -26,6 +26,7 @@ import { VesselListComponent } from './vessel-list/vessel-list.component';
     AppRoutingModule,
     CoreModule,
     FormsModule,
+    GoogleMapsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
