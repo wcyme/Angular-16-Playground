@@ -18,6 +18,7 @@ import { VesselListComponent } from './vessel-list/vessel-list.component';
     HomeComponent,
     VesselEditComponent,
     VesselListComponent,
+    GeocodeSearchComponent,
   ],
   imports: [
     BrowserModule,
