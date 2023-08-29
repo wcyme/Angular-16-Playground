@@ -1,0 +1,11 @@
+<div class="container">
+    <google-map height="400px" width="750px" [center]="center" [zoom]="zoom" (mapClick)="moveMap($event)"
+        (mapMousemove)="move($event)">
+        <map-marker *ngFor="let markerPosition of getCheckedGeocodeData()" [position]="markerPosition"
+            [options]="getMarkerOptions(markerPosition)"></map-marker>
+    </google-map>
+
+    <app-geocode-search (geocodeEvent)="addMarker($event)"></app-geocode-search>
+
+    <app-geocode-item *ngFor="let customGeocode of customGeocodeData" [customGeocodeData]="customGeocode"></app-geocode-item>
+</div>

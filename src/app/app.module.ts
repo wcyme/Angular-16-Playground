@@ -10,6 +10,10 @@ import { VesselEditComponent } from './vessel-edit/vessel-edit.component';
 import { FormsModule } from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
 import { VesselListComponent } from './vessel-list/vessel-list.component';
+import { GoogleMapComponent } from './google-map/google-map.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { GeocodeSearchComponent } from './geocode-search/geocode-search.component';
+import { GeocodeItemComponent } from './geocode-item/geocode-item.component';
 
 
 @NgModule({
@@ -18,6 +22,7 @@ import { VesselListComponent } from './vessel-list/vessel-list.component';
     HomeComponent,
     VesselEditComponent,
     VesselListComponent,
+    GoogleMapComponent,
     GeocodeSearchComponent,
     GeocodeItemComponent,
   ],
